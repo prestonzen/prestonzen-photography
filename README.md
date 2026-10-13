@@ -1,12 +1,25 @@
 # Preston Zen Photography
 
-Mobile-first React + Vite portfolio for portrait sessions in Osaka.
+A mobile-first React and Vite portfolio for portrait sessions in Osaka.
 
-## Source
+## Local development
 
-Download `prestonzen-photography-source.zip` for the complete reproducible source, dependency lockfile, setup notes, and reviewed public photo derivatives. Extract the archive and follow its `README.md` to run the project locally.
+- Node.js 24
+- `npm ci`
+- `npm run dev`
+- `npm run build`
 
-The public gallery contains original Preston Zen photographs. This self-authored portfolio is not independent reviews or press coverage.
+The gallery data lives in `src/site/photos.js`. Store optimized, metadata-stripped public JPEGs in `public/images/` and use factual alt text.
+
+## Deployment
+
+The live Cloudflare Pages project uses Direct Upload. Build with `npm run build` and upload the generated `dist/` directory. This project is not configured for Git-connected builds.
+
+A GitHub Actions workflow could deploy the build through Wrangler Direct Upload if a scoped Cloudflare API token is stored as a GitHub Actions secret. No workflow or token is configured here.
+
+## Content notes
+
+The portfolio reflects Preston's self-reported experience and session details. It does not claim independent reviews, press, awards, or client endorsements.
 
 ## Contact
 
