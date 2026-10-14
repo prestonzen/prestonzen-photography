@@ -1,8 +1,8 @@
 # Preston Zen Photography
 
-A React and Vite portfolio for Preston Zen, a photographer based in Higashiosaka, Japan. Live at [photography.prestonzen.com](https://photography.prestonzen.com).
+A React and Vite portfolio for Preston Zen, a photographer based in San Diego and seasonally in Osaka. Live at [photography.prestonzen.com](https://photography.prestonzen.com).
 
-The site is a neutral showcase of the work (kimono portraits, people, places) with background and contact details. It has no pricing or booking flow.
+The site is a neutral showcase of the work (kimono portraits in Osaka, portraits and travel) with background and contact details. It has no pricing or booking flow.
 
 ## Local development
 

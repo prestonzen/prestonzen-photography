@@ -65,6 +65,8 @@ h1 em,h2 em,.intro__statement em { color:var(--accent); font-style:italic; }
 .about h2 { font-size:clamp(2.6rem,4vw,3.8rem); line-height:1.02; }
 .about__copy { max-width:680px; }
 .about__copy p { color:var(--soft); font-size:.95rem; line-height:1.9; margin:0 0 1.1rem; }
+.inline-link { border-bottom:1px solid #a98274; color:var(--ink); transition:color .2s ease; }
+.inline-link:hover { color:var(--accent); }
 .facts { border-top:1px solid var(--line); display:grid; gap:0 2rem; grid-template-columns:repeat(3,1fr); margin:2.4rem 0 0; }
 .facts div { padding-top:1.3rem; }
 .facts dt { font-family:var(--serif); font-size:clamp(1.6rem,2.6vw,2.2rem); line-height:1.1; margin-bottom:.4rem; }

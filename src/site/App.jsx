@@ -5,7 +5,7 @@ import { profile, series } from './content.js';
 const ordered = series.flatMap((group) => photos.filter((photo) => photo.series === group.id));
 const bySlug = Object.fromEntries(ordered.map((photo) => [photo.slug, photo]));
 const seriesTitle = Object.fromEntries(series.map((group) => [group.id, group.title]));
-const hero = ['sakura-night', 'shrine-pillar-profile', 'red-railing'].map((slug) => bySlug[slug]).filter(Boolean);
+const hero = ['sakura-night', 'shrine-pillar-profile', 'torii-obi'].map((slug) => bySlug[slug]).filter(Boolean);
 
 const srcSet = (slug) => `/images/${slug}-640.webp 640w, /images/${slug}-1200.webp 1200w`;
 const caption = (photo) => [photo.title, photo.place].filter(Boolean).join(' · ');
@@ -120,7 +120,7 @@ function App() {
           <h2 id="about-title">People first.<br /><em>Pictures follow.</em></h2>
         </div>
         <div className="about__copy">
-          {profile.bio.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+          {profile.bio.map((paragraph) => { const [before, after] = paragraph.split('{mentor}'); return <p key={paragraph}>{before}{after !== undefined && <><a className="inline-link" href={profile.mentor.href} rel="noopener">{profile.mentor.name}</a>{after}</>}</p>; })}
           <dl className="facts">
             {profile.facts.map((fact) => <div key={fact.label}><dt>{fact.value}</dt><dd>{fact.label}</dd></div>)}
           </dl>
