@@ -112,6 +112,26 @@ export const photos = [
     "color": "#6c6964"
   },
   {
+    "slug": "three-friends",
+    "series": "portraits",
+    "title": "Night out",
+    "place": null,
+    "alt": "Three young women posing close together, leaning on one another in front of a wooden door, lit by flash.",
+    "width": 900,
+    "height": 1200,
+    "color": "#483d39"
+  },
+  {
+    "slug": "river-catch",
+    "series": "portraits",
+    "title": "River catch",
+    "place": "Dnipro River, Kyiv",
+    "alt": "A smiling man in sunglasses holding up a fish on a sandy bank of the Dnipro.",
+    "width": 1200,
+    "height": 900,
+    "color": "#98958f"
+  },
+  {
     "slug": "taj-reflection",
     "series": "portraits",
     "title": "Mid-air",
