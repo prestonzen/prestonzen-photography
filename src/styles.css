@@ -36,7 +36,8 @@ h1 em,h2 em,.intro__statement em { color:var(--accent); font-style:italic; }
 .series-index a { align-items:baseline; border-bottom:1px solid var(--line); display:flex; font-family:var(--serif); font-size:1.35rem; gap:1rem; padding:.85rem 0; transition:padding .25s ease,color .25s ease; }
 .series-index a:hover { color:var(--accent); padding-left:.4rem; }
 .series-index span { color:var(--accent); font-family:var(--sans); font-size:.62rem; letter-spacing:.14em; }
-.series-index small { color:var(--muted); font-family:var(--sans); font-size:.68rem; margin-left:auto; }
+.series-index small { color:var(--muted); font-family:var(--sans); font-size:.8rem; margin-left:auto; transition:transform .25s ease; }
+.series-index a:hover small { color:var(--accent); transform:translateX(3px); }
 .intro__images { display:grid; gap:clamp(.6rem,1.2vw,1.1rem); grid-template-columns:1.25fr 1fr; grid-template-rows:auto auto; }
 .intro__frame { background:none; border:0; cursor:zoom-in; overflow:hidden; padding:0; position:relative; }
 .intro__frame img { height:100%; inset:0; object-fit:cover; position:absolute; transition:transform .8s cubic-bezier(.2,.7,.2,1); width:100%; }
@@ -50,8 +51,7 @@ h1 em,h2 em,.intro__statement em { color:var(--accent); font-style:italic; }
 .series { border-top:1px solid var(--line); display:grid; gap:clamp(2rem,5vw,5rem); grid-template-columns:minmax(220px,.33fr) 1fr; padding-bottom:clamp(4rem,7vw,6.5rem); padding-top:clamp(3.5rem,6vw,5.5rem); }
 .series__heading { align-self:start; position:sticky; top:6.5rem; }
 .series__heading h2 { font-size:clamp(2.6rem,4vw,3.8rem); line-height:1; margin-bottom:1.2rem; }
-.series__note { color:var(--soft); font-size:.88rem; line-height:1.8; margin:0 0 1.2rem; max-width:330px; }
-.series__count { color:var(--muted); font-size:.68rem; letter-spacing:.06em; }
+.series__note { color:var(--soft); font-size:.88rem; line-height:1.8; margin:0; max-width:330px; }
 .gallery { column-count:3; column-gap:clamp(.7rem,1.4vw,1.2rem); }
 .photo-card { break-inside:avoid; margin:0 0 clamp(1.2rem,2vw,1.8rem); }
 .photo-card button { background:none; border:0; cursor:zoom-in; display:block; overflow:hidden; padding:0; width:100%; }

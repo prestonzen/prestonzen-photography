@@ -47,7 +47,7 @@ function Lightbox({ photo, onClose, onStep }) {
     <button className="lightbox__previous" onClick={() => onStep(-1)} aria-label="Previous photograph">←</button>
     <figure className="lightbox__figure">
       <img key={photo.slug} src={`/images/${photo.slug}-1200.webp`} alt={photo.alt} width={photo.width} height={photo.height} />
-      <figcaption><span>{caption(photo)}</span><span className="lightbox__meta">{seriesTitle[photo.series]} · {String(index + 1).padStart(2, '0')} / {ordered.length}</span></figcaption>
+      <figcaption><span>{caption(photo)}</span><span className="lightbox__meta">{seriesTitle[photo.series]}</span></figcaption>
     </figure>
     <button className="lightbox__next" onClick={() => onStep(1)} aria-label="Next photograph">→</button>
   </div>;
@@ -82,7 +82,7 @@ function App() {
           <p className="intro__statement"><em>{profile.statement}</em></p>
           <p className="intro__description">{profile.intro}</p>
           <ul className="series-index" aria-label="Series">
-            {series.map((group) => <li key={group.id}><a href={`#${group.id}`}><span>{group.index}</span>{group.title}<small>{photos.filter((photo) => photo.series === group.id).length}</small></a></li>)}
+            {series.map((group) => <li key={group.id}><a href={`#${group.id}`}><span>{group.index}</span>{group.title}<small aria-hidden="true">→</small></a></li>)}
           </ul>
         </div>
         <div className="intro__images">
@@ -97,10 +97,9 @@ function App() {
           const items = ordered.filter((photo) => photo.series === group.id);
           return <section className="series section-wrap" id={group.id} key={group.id} aria-labelledby={`${group.id}-title`}>
             <div className="series__heading">
-              <p className="eyebrow">{group.index} / {String(series.length).padStart(2, '0')}</p>
+              <p className="eyebrow">SERIES {group.index}</p>
               <h2 id={`${group.id}-title`}>{group.title}</h2>
               <p className="series__note">{group.note}</p>
-              <span className="series__count">{String(items.length).padStart(2, '0')} photographs</span>
             </div>
             <div className="gallery">
               {items.map((photo) => <figure className="photo-card" key={photo.slug}>
